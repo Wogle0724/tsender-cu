@@ -1,7 +1,7 @@
 "use client"
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import config from "./rainbowKitConfig";
+import config from "@/src/rainbowKitConfig"
 import { useState, type ReactNode } from "react";
 import { WagmiProvider } from "wagmi"
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
