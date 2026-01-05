@@ -5,7 +5,6 @@ import { useState, useMemo, useEffect } from 'react';
 import { chainsToTSender, tsenderAbi, erc20Abi } from '../constants';
 import { useChainId, useConfig, useAccount, useWriteContract, useReadContracts } from 'wagmi';
 import { readContract, waitForTransactionReceipt } from '@wagmi/core'
-import { format } from 'path';
 import { calculateTotal } from "@/src/util";
 
 export default function AirdropForm() {
@@ -87,9 +86,9 @@ export default function AirdropForm() {
         // 1.b approve t-sender contract to send tokens
         // 2. call airdrop function on t-sender contract
         // 3. wait for contract to be mined
-        const tSenderAddress = chainsToTSender[chainID]["tsender"]
-        const approvedAmount = await getApprovedAmount(tSenderAddress);
         try{
+            const tSenderAddress = chainsToTSender[chainID]["tsender"]
+            const approvedAmount = await getApprovedAmount(tSenderAddress);
             setError(null);
             console.log("Approved Amount: " + approvedAmount);
             if (approvedAmount < total) {

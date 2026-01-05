@@ -10,7 +10,10 @@ function airdropERC20(
     uint256 totalAmount
 )
 ```
-4. Deploy to fleek
+4. e2e Testing
+   a. when connected, see the form
+   b. when disconnected, don't see the form
+5. Deploy to fleek
 
 
 ## For Testing:
