@@ -18,14 +18,14 @@ export default function InputField({
     onChange,
 }: InputFieldProps) {
     const baseClass = `
-        w-full px-4 rounded-lg border border-gray-300 
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+        w-full px-4 rounded-lg border border-gray-300 bg-white text-black
+        focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent
         py-2
     `;
 
     return (
         <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-gray-700">
+            <label className="text-sm font-semibold text-gray-700">
                 {label}
             </label>
             {large ? (

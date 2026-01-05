@@ -3,7 +3,7 @@ import { FaBitcoin } from "react-icons/fa"; // Importing an icon from react-icon
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between p-4 bg-white shadow">
+        <header className="flex items-center justify-between p-4 bg-white shadow sticky top-0 z-10">
             <div className="flex items-center">
                 <a
                     href="https://github.com/Wogle0724"
